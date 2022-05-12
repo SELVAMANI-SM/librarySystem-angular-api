@@ -1,0 +1,26 @@
+<ngx-spinner class="ball-scale-multiple"></ngx-spinner>
+<form ngNativeValidation (submit)="EBookLink()">
+<div>
+    <input type="number" id="booklink" name="booklink" [(ngModel)]="booklink"placeHolder="Enter Book Id" required>  
+    <button type="submit" class="btn btn-primary">E-BookLink</button> &nbsp;
+</div>
+<table  [style.display]="none" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Book Name</th>
+            <th>Book LINK</th>
+        </tr>
+    </thead>
+    <tbody id="display">
+        <tr *ngIf="value != null" >
+            <td>{{value.name}}</td>
+            <iframe src="{{value.ebookLink}}" alt="video" width="400px" height="400px"></iframe>
+            <iframe src="https://www.thehindu.com/" title="W3Schools Free Online Web Tutorials">
+            </iframe>
+            <td><a href="{{value.ebookLink}}">{{value.ebookLink}}></a></td>
+           
+        </tr>
+    </tbody>
+</table>
+
+</form>

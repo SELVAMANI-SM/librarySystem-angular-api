@@ -1,0 +1,26 @@
+<ngx-spinner class="ball-scale-multiple"></ngx-spinner>
+<form  id="number"ngNativeValidation (submit)="dateDinamalar()">
+    <div>
+        <input type="date"id="datedinamalar"name="datedinamalar" [(ngModel)]="datedinamalar" placeHolder="Enter Date" required Autofocus style=" height: 70px;  width: 520px;"><span id="invalid"></span>
+        <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+            <br><br><button type="submit" class="btn btn-primary">Date </button> &nbsp;
+           
+         
+        
+        </div>
+        <table  [style.display]="none" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>DATE </th>
+                    <th>Dinamalar</th>
+                </tr>
+            </thead>
+            <tbody id="display">
+                <tr *ngFor="let date of value">
+                    <td>{{date.date}}</td>
+                    <td><a href="{{date.dinamalar}}">Link</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+</form>

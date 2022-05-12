@@ -1,0 +1,39 @@
+
+<ngx-spinner class="ball-scale-mutiply"></ngx-spinner>
+<section id="cardDetails">
+    <div class="card" style="width:50%">
+        <div class="shadow p-3 mb-0 bg-body  rounded">
+
+            <form id="number" ngNativeValidate (submit)="addNewsPaper()">
+                <div>
+                    <h5 style="text-align:center">ADD NEWS-PAPER</h5>
+                </div>
+                <hr>
+                <div  style="padding-bottom:10px;">
+                    <input type="text" id="dinamalar" name="dinamalar" [(ngModel)]="dinamalar"
+                        placeHolder="                         Enter E-Dinamalar NewsPaper" required autofocus
+                        style="width:100%; height:70px;padding: 10px;"><span id="dinamalar"></span>
+                </div >
+
+                <div  style="padding-bottom:10px;">
+                    <input type="text" id="hindu" name="hindu" [(ngModel)]="hindu"
+                        placeHolder="                         Enter E-Hindu NewsPaper" required
+                        style="width:100%; height:70px;padding: 10px;"><span id="hindu"></span>
+                </div >
+
+                <div  style="padding-bottom:10px;">
+                    <input type="text" id="indianExpress" name="indianExpress" [(ngModel)]="indianExpress"
+                        placeHolder="                         Enter E-Indian Expres NewsPaper" required
+                        style="width:100%; height:70px;padding: 10px;"><span id="indian"></span>
+                </div>
+
+                <div  style="margin-left: 300px;padding-bottom:10px;">
+                    <button type="submit" class="btn btn-primary">Add</button> &nbsp;
+                    <button type="reset" class="btn btn-danger"  style="margin-left:10px;">Reset</button>
+                </div>
+                <hr>
+            </form>
+        </div>
+    </div>
+</section>
+

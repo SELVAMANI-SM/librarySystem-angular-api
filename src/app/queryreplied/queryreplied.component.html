@@ -1,0 +1,22 @@
+<ngx-spinner class="ball-scale-multiple"></ngx-spinner>
+<form id="number">
+    <table  *ngIf="item" class="table table-bordered w-100" >
+        <thead>
+            <tr>
+                <th> Id</th>
+                <th> Send Query</th>
+                <th> Reply-Query </th>
+               
+            </tr>
+        </thead>
+        <tbody id="display">
+            <tr *ngFor="let value of item" >
+                <td>{{value.userId}}</td>
+                <td>{{value.userQuery}}</td>
+                <td>{{value.reply}}</td>
+             
+            </tr>
+        </tbody>
+    </table>
+  </form>
+  

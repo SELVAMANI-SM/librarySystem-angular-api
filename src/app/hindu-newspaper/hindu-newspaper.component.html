@@ -1,0 +1,25 @@
+<ngx-spinner class="ball-scale-multiple"></ngx-spinner>
+<form ngNativeValidation (submit)="hinduNews()">
+    <div>
+       
+        
+        <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+         
+        
+        </div>
+        <table  [style.display]="none" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>DATE </th>
+                    <th>HINDU</th>
+                </tr>
+            </thead>
+            <tbody id="display">
+                <tr *ngFor="let item of value">
+                    <td>{{item.date}}</td>
+                    <td><a href="{{item.hindu}}">Link</a></td>
+                </tr>
+            </tbody>
+        </table>
+</form>
+

@@ -1,0 +1,30 @@
+<p>memberreturnbook works!</p>
+<form>
+
+
+    <div class="row">
+     
+            <ng-container  *ngFor="let item of value" style="width: 18rem;">
+                <div    class="col-3">
+                <div class="card">
+                    <img class="card-img-top" src="{{item.imageLink}}" alt="Card image cap" width="50px" height="590px">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.id}}</h5>
+                        <h5 class="card-title">{{item.name}}</h5>
+                       
+                        <p class="card-text">Author - {{item.author}}</p> 
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" >Department - {{item.department}}</li>
+                      
+                        <li class="list-group-item" >Status - [{{item.status}}]</li>
+                        <li class="list-group-item" > <button type="button" (click)="bookreturn(item.id)">Return</button></li>
+                    </ul>
+                   
+                </div>
+        </div>
+    </ng-container>
+ </div>
+
+
+</form>

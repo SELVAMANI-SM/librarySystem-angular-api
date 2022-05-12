@@ -1,0 +1,22 @@
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+  <section id="cardDetails" *ngIf="item">
+      <div class="card" style="width:80%">
+  <div class="accordion accordion-flush"  *ngFor="let value of item;let i=index" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" [id]="'heading'+i">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse'+i" aria-expanded="true" [attr.aria-controls]="'flush-collapse'+i">
+           <h4>NAME :  <span>{{value.name}}</span> <span style="margin-left:900px;">ID :  </span><span>{{value.id}}</span></h4>
+        </button>
+      </h2>
+      <div [id]="'flush-collapse'+i" class="accordion-collapse collapse" [attr.aria-labelledby]="'flush-heading'+i" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+         <h4>EMAIL :<span>{{value.email}}</span><span Style="margin-left:190px;">MOBILE : </span><span>{{value.mobile}}</span><span style="margin-left:350px;">FINE :  </span><span>{{value.fine}}</span></h4>
+        </div>
+      </div>
+    </div>
+   
+   
+  </div>
+</div>
+  
+</section>

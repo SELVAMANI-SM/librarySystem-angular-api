@@ -1,0 +1,22 @@
+<ngx-spinner class="ball-scale-multiple"></ngx-spinner>
+<form ngNativeValidation (submit)="videoLink()">
+    <div>
+        <input type="number" id="videolink" name="videolink" [(ngModel)]="videolink"placeHolder="Enter Book Id" required>  
+        <button type="submit" class="btn btn-primary">E-BookLink</button> &nbsp;
+    </div>
+    <table  [style.display]="none" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Book id</th>
+                <th>Book name</th>
+            </tr>
+        </thead>
+        <tbody id="display">
+            <tr *ngIf="value != null" >
+                <td>{{value.id}}</td>
+                <iframe [src]='value.videoLink|safe' alt="video" width="400px" height="400px"></iframe>
+                <td><a href="{{value.videoLink}}">{{value.name}}</a></td>
+            </tr>
+        </tbody>
+    </table>
+    </form>

@@ -1,0 +1,47 @@
+<section id="cardDetails">
+    <div class="card" style="width:50%">
+        <div class="shadow p-3 mb-0 bg-body  rounded">
+            <form id="number" ngNativeValidation (submit)="login()">
+                <div>
+                    <h5 style="text-align:center">LOGIN</h5>
+                </div>
+                <hr>
+                <div style="padding-bottom:10px;">
+
+                    <input type="email" id="email" name="email" [(ngModel)]="email" required
+                        placeHolder="Enter Your Email" Autofocus style="width:100%; height:70px; padding: 10px;"><span
+                        id="emailinvalid"></span>
+                </div>
+
+                <div style="padding-bottom:10px;">
+
+
+                    <input type="password" id="password" name="password" [(ngModel)]="password"
+                        placeHolder="Enter Your Password" required Autofocus style="width:100%; height:70px; padding: 10px;"><span
+                        id="passwordinvalid"></span>
+                </div>
+
+                <div style="padding-bottom:10px;">
+                    <label for="accountType">Account Type</label><br>
+                    <select name="accountType" [(ngModel)]="type" required style="width:100%; height:70px; padding: 10px;">
+                        <option value="" disabled>Select Type</option>
+                        <option value="user">USER</option>
+                        <option value="member">MEMBER</option>
+                        <option value="admin">ADMIN</option>
+                    </select>
+                </div>
+                <hr>
+
+
+                <div style="margin-left: 220px;padding-bottom:10px;">
+                    <button type="submit" class="btn btn-primary">LOGIN</button> &nbsp;
+
+                    <button type="reset" class="btn btn-danger" style="margin-left:10px;">RESET</button>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</section>
+

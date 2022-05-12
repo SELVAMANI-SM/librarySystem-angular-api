@@ -1,0 +1,26 @@
+<ngx-spinner class="ball-scale-multiple"></ngx-spinner>
+<form id="number"ngNativeValidation (submit)="dateHindu()">
+    <div>
+        <input type="date"id="datehindu"name="datehindu" [(ngModel)]="datehindu" placeHolder="Enter Date" required Autofocus style=" height: 70px;  width: 480px;"><span id="invalid"></span>
+        <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+            <br><br><button type="submit" class="btn btn-primary">Date </button> &nbsp;
+           
+         
+        
+        </div>
+        <table  [style.display]="none" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>DATE </th>
+                    <th>HINDU</th>
+                </tr>
+            </thead>
+            <tbody id="display">
+                <tr *ngFor="let date of value">
+                    <td>{{date.date}}</td>
+                    <td><a href="{{date.hindu}}">Link</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+</form>

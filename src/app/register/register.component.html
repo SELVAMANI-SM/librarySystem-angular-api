@@ -1,0 +1,77 @@
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+<section id="cardDetails">
+  <div class="card" style="width:50%">
+    <div class="shadow p-3 mb-0 bg-body  rounded">
+      <!-- <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner> -->
+      <form id="number" ngNativeValidate (submit)="register()" #regForm="ngForm">
+        <div>
+          <h5 style="text-align:center ">REGISTER</h5>
+        </div>
+        <hr>
+
+        <div  style="padding-bottom:10px;">
+
+          <input type="text" id="name" name="name" [(ngModel)]="name"
+            placeHolder="                                                  Enter  Your  Name*" required Autofocus
+            style="width:100%; height:70px;padding: 10px;"><span id="nameinvalid"></span>
+        </div>
+      
+        <div style="padding-bottom:10px;">
+
+          <input type="email" id="email" name="email" [(ngModel)]="email"
+            placeHolder="                                                    Enter Your Email*" required Autofocus
+            style="width:100%;  height:70px;padding: 10px;"><span id="emailinvalid"></span>
+        </div>
+        
+        <div style="padding-bottom:10px;">
+
+          <input type="password" id="password" name="password" [(ngModel)]="password"
+            placeHolder="                                                 Enter Your Password*" required Autofocus
+            style="width:100%;  height:70px;padding: 10px;"><span id="passwordinvalid"></span>
+        </div>
+        
+        <div style="padding-bottom:10px;">
+
+          <input type="number" id="mobile" name="mobile" [(ngModel)]="mobile"
+            placeHolder="                                                   Enter Your mobile*" required
+            style="width:100%;  height:70px;padding: 10px;"><span id="mobileinvalid"></span>
+        </div>
+        
+        <div style="padding-bottom:10px;">
+          <label for="accountType" style="margin-left: 250px;padding-bottom:10px;">Account Type</label>
+          <br>
+          <select name="accountType" [(ngModel)]="type"  placeHolder=" select type"required style="width:100%;  height:70px;padding: 10px;">
+            <option value="" disabled>Select Type</option>
+            <option value="user">User</option>
+            <option value="member">Member</option>
+          </select>
+        </div>
+        <hr>
+        
+
+
+        <div style="margin-left: 80px;">
+          <button type="submit" class="btn btn-primary">
+            REGISTER
+            <!-- <span class="spinner-border spinner-border-sm" role="status" [style.display]="spinnerDisplay"></span>
+        <span  [style.display]="spinnerDisplay"> <img  id="number"src="https://i.pinimg.com/originals/50/f3/88/50f388b880a13ac6d397651927f136b7.gif" width="600px"></span>
+        <span   [style.display]="spinnerDisplay1">submit</span> -->
+          </button>
+          <button type="reset" class="btn btn-danger" style="margin-left:250px">RESET</button>
+          <!-- <button  class="btn btn-primary">Submit</button> &nbsp; -->
+
+        </div>
+        <div id="message" *ngIf="message">
+
+          <ul>
+            <li *ngFor="let m of message">
+
+              <font style="color:red">{{m}}</font>
+            </li>
+          </ul>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>

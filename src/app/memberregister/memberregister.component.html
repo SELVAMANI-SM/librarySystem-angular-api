@@ -1,0 +1,25 @@
+ <section id="cardDetails">
+
+<div  class="card" style="width:60%">
+    <div class="shadow p-3 mb-0 bg-body  rounded">
+    <form ngNativeValidate (submit)="payment()">
+       <div >
+           <h5 style="text-align:center"><i>Card details</i></h5>
+       </div>
+       <hr>
+        <div style="padding-bottom:10px;">
+            <input type="number" id="number" name="number" [(ngModel)]="number1"    placeHolder="                                                            Enter Credit Card 16  Number" required autofocus style="width:100%;padding: 10px;">
+        </div>
+        <div>
+            <input type="number" id="amount" name="amount"[(ngModel)]="amount" placeholder="                                                                   Enter amount 150 " required autofocus style="width:100%">
+        </div>
+        <hr>
+        <div style="margin-left: 300px;padding-bottom:10px;">
+            <button type="submit" class="btn btn-primary">Pay</button>
+            <button type="reset" class="btn btn-danger" style="margin-left:10px;">Reset</button>
+        </div>
+    </form>
+</div>
+</div>
+</section> 
+

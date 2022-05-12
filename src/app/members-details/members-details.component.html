@@ -1,0 +1,22 @@
+<ngx-spinner class="ball-scale-multiple"></ngx-spinner>
+  <section id="cardDetails">
+    <div class="card" style="width:80%">
+<div class="accordion"  *ngFor="let value of item" id="value.userId">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="value.userId" aria-expanded="true" aria-controls="value.userId">
+         <h4>ID :  <span>{{value.userId}}</span> <span style="margin-left:900px;">BOOK-ID :  </span><span>{{value.bookId}}</span></h4>
+      </button>
+    </h2>
+    <div id="value.userId" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="value.userId">
+      <div class="accordion-body">
+       <h4>TAKE-DATE :<span>{{value.takenDate}}</span><span Style="margin-left:190px;">Return-Date : </span><span>{{value.returnDate}}</span><span style="margin-left:350px;">STATUS : </span><span>{{value.status}}</span></h4>
+      </div>
+    </div>
+  </div>
+ 
+ 
+</div>
+</div>
+
+</section>
