@@ -35,7 +35,7 @@ export class DeletebookdeptComponent implements OnInit {
       if(count==1)
       {
        this.spinner.show();
-        const url="http://localhost:9050/book/deleteByDepartment/"+department;
+        const url="https://collegelibrarysystem.herokuapp.com/book/deleteByDepartment/"+department;
         this.http.get(url).subscribe((res:any)=>
         {
           this.spinner.hide();

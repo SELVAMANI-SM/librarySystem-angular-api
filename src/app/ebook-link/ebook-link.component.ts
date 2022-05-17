@@ -39,7 +39,7 @@ export class EbookLinkComponent implements OnInit {
     {
       alert(booklink)
       this.spinner.show();
-      const url="http://localhost:9050/book/eLink/"+booklink;
+      const url="https://collegelibrarysystem.herokuapp.com/book/eLink/"+booklink;
       fetch(url).then(res=>res.json()).then(res=>{
         this.spinner.hide();
         this.value=res;

@@ -36,7 +36,7 @@ export class SearchByBookAuthorComponent implements OnInit {
     if(count==1)
     {
       this.spinner.show();
-      const url="http://localhost:9050/book/findByAuthor/"+author;
+      const url="https://collegelibrarysystem.herokuapp.com/book/findByAuthor/"+author;
       this.http.get(url).subscribe((res:any)=>
       {
         this.spinner.hide();

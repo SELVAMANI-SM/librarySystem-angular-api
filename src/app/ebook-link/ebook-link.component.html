@@ -14,10 +14,11 @@
     <tbody id="display">
         <tr *ngIf="value != null" >
             <td>{{value.name}}</td>
-            <iframe src="{{value.ebookLink}}" alt="video" width="400px" height="400px"></iframe>
-            <iframe src="https://www.thehindu.com/" title="W3Schools Free Online Web Tutorials">
-            </iframe>
-            <td><a href="{{value.ebookLink}}">{{value.ebookLink}}></a></td>
+            
+            <iframe  style ="width: 500px ;height: 700px;"src="{{value.ebookLink}}" alt="video" width="900px;" height="400px;"></iframe>
+            
+            <iframe [src]="value.ebookLink| safe"  alt="video1" width="400px" height="400px"></iframe>
+
            
         </tr>
     </tbody>

@@ -23,7 +23,7 @@ export class HinduNewspaperComponent implements OnInit {
   {
      
     this.spinner.show();
-        const url="http://localhost:9050/news/hindu";
+        const url="https://collegelibrarysystem.herokuapp.com/news/hindu";
         this.http.get(url).subscribe((res:any)=>{
           
         this.spinner.hide();

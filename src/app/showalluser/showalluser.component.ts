@@ -29,7 +29,7 @@ export class ShowalluserComponent implements OnInit {
     
     
         this.spinner.show();
-        const url ="http://localhost:9050/user/allUser";
+        const url ="https://collegelibrarysystem.herokuapp.com/user/allUser";
         this.http.get(url).subscribe((res: any) => {
           this.spinner.hide();
           this.item = res;

@@ -28,7 +28,7 @@ export class ProfileComponent implements OnInit {
     
       this.profile=localStorage.getItem("SESSION_ID");
       this.spinner.show();
-        const url ="http://localhost:9050/user/profile/"+this.profile;
+        const url ="https://collegelibrarysystem.herokuapp.com/user/profile/"+this.profile;
         this.http.get(url).subscribe((res: any) => {
           this.spinner.hide();
           this.value = res;

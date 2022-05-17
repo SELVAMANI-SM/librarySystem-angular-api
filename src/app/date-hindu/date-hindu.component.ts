@@ -36,7 +36,7 @@ export class DateHinduComponent implements OnInit {
     if(count==1)
     {
       this.spinner.show();
-      const url="http://localhost:9050/news/hinduByDate/"+datehindu;
+      const url="https://collegelibrarysystem.herokuapp.com/news/hinduByDate/"+datehindu;
       this.http.get(url).subscribe((res:any)=>{
         this.spinner.hide();
         this.value=res;

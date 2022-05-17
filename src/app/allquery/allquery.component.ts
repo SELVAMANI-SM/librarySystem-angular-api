@@ -29,7 +29,7 @@ export class AllqueryComponent implements OnInit {
     
      
     this.spinner.show();
-        const url ="http://localhost:9050/user/allQueryCheck";
+        const url ="https://collegelibrarysystem.herokuapp.com/user/allQueryCheck";
         this.http.get(url).subscribe((res:any)=>
         {
           this.spinner.hide();

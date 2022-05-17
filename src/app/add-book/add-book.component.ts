@@ -86,7 +86,7 @@ validation( name:String,department:String,author:String,status:String,eBookLink:
     {
       this.spinner.show();
 
-      const url="http://localhost:9050/book/addBook?name="+name+"&department="+department+"&author="+author+"&status="+status+"&eBookLink="+eBookLink+"&videoLink="+videoLink+"&imageLink="+imageLink;
+      const url="https://collegelibrarysystem.herokuapp.com/book/addBook?name="+name+"&department="+department+"&author="+author+"&status="+status+"&eBookLink="+eBookLink+"&videoLink="+videoLink+"&imageLink="+imageLink;
 		this.http.get(url).subscribe((res:any)=>{
       this.spinner.hide();
       let value=res.message;

@@ -35,7 +35,7 @@ export class DeletebookauthorComponent implements OnInit {
     if(count==1)
     {
      
-      const url="http://localhost:9050/book/findByAuthor/"+author;
+      const url="https://collegelibrarysystem.herokuapp.com/book/findByAuthor/"+author;
       this.http.get(url).subscribe((res:any)=>
       {
         let value=res.message;

@@ -101,7 +101,7 @@ export class RegisterComponent implements OnInit {
         }
 
         this.spinner.show();
-        const url = "http://localhost:9050/user/register";
+        const url = "https://collegelibrarysystem.herokuapp.com/user/register";
         this.http.post(url, userObj).subscribe((res: any) => {
           this.spinner.hide();
           let value = res.message;

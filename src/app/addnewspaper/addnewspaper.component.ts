@@ -48,7 +48,7 @@ validation(dinamalar:String,hindu:String,indianExpress:String){
   if(count==3)
   {
     this.spinner.show();
-    const url="http://localhost:9050/news/add?indianExpress="+indianExpress+"&hindu="+hindu+"&dinamalar="+dinamalar;
+    const url="https://collegelibrarysystem.herokuapp.com/news/add?indianExpress="+indianExpress+"&hindu="+hindu+"&dinamalar="+dinamalar;
   this.http.get(url).subscribe((res:any)=>{
     this.spinner.hide();
     let value=res.message;

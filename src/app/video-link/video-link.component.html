@@ -14,7 +14,7 @@
         <tbody id="display">
             <tr *ngIf="value != null" >
                 <td>{{value.id}}</td>
-                <iframe [src]='value.videoLink|safe' alt="video" width="400px" height="400px"></iframe>
+                <iframe [src]='value.videoLink|safe' alt="video" width="500px" height="400px"></iframe>
                 <td><a href="{{value.videoLink}}">{{value.name}}</a></td>
             </tr>
         </tbody>

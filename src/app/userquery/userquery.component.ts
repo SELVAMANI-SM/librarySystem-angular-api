@@ -41,7 +41,7 @@ export class UserqueryComponent implements OnInit {
       this.spinner.show();
       this.profile=localStorage.getItem("SESSION_ID");
       
-      const url="http://localhost:9050/user/query?userId="+this.profile+"&userQuery="+name;
+      const url="https://collegelibrarysystem.herokuapp.com/user/query?userId="+this.profile+"&userQuery="+name;
 
       this.http.get(url).subscribe((res:any)=>
       {

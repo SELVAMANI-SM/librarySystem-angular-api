@@ -38,7 +38,7 @@ export class SearchByBookDeptComponent implements OnInit {
       if(count==1)
       {
         this.spinner.show();
-        const url="http://localhost:9050/book/findByDepartment/"+department;
+        const url="https://collegelibrarysystem.herokuapp.com/book/findByDepartment/"+department;
         this.http.get(url).subscribe((res:any)=>
         {
           this.spinner.hide();

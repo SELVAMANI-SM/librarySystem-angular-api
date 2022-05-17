@@ -30,7 +30,7 @@ export class MembertakebookComponent implements OnInit {
   {
     event?.preventDefault();
     this.id=localStorage.getItem("SESSION_ID");
-    const url ="http://localhost:9050/book/findIds/"+this.id;
+    const url ="https://collegelibrarysystem.herokuapp.com/book/findIds/"+this.id;
     
     fetch(url).then(res=>res.text()).then(res=>{
       let ans=res;
@@ -54,7 +54,7 @@ export class MembertakebookComponent implements OnInit {
      
      this.none1="block";
     
-     const url="http://localhost:9050/book/display";
+     const url="https://collegelibrarysystem.herokuapp.com/book/display";
      fetch(url).then(res=>res.json()).then(res=>{
        
        this.value=res;

@@ -43,7 +43,7 @@ export class DeletenewspaperComponent implements OnInit {
     if (count == 2) {
 
       this.spinner.show();
-      const url = "http://localhost:9050/news/deleteNews?date=" + before + "&toDate=" + after;
+      const url = "https://collegelibrarysystem.herokuapp.com/news/deleteNews?date=" + before + "&toDate=" + after;
       this.http.get(url).subscribe((res: any) => {
         this.spinner.hide();
 

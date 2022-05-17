@@ -25,9 +25,9 @@ export class LoginComponent implements OnInit {
 
   login()
   {
-    this.validation(this.email,this.password,this.type);
+    this.validation(this.email,this.password);
   }
-  validation(email:String,password:String,type:String)
+  validation(email:String,password:String)
   {
     event?.preventDefault();
     let count=0;
@@ -46,26 +46,21 @@ export class LoginComponent implements OnInit {
     else{
       count++;
     }
-    if(type==null||type.trim()=="")
-    {
-      console.log("invalid type");
-
-    }
-    else{
-      count++;
-    }
-    if(count==3)
+  
+    if(count==2)
     {
       const userObj={
         "email":email,
-        "password":password,
-        "userType":type
+        "password":password
+      
       }
       
-      const url="http://localhost:9050/user/login";
+      const url="https://collegelibrarysystem.herokuapp.com/user/login";
          this.http.post(url,userObj).subscribe((res: any) => {
           this.spinner.hide();
-          let value = res;
+          let value = res.number;
+          let type =res.type;
+        
 
           this.toastr.success("logged in");
          

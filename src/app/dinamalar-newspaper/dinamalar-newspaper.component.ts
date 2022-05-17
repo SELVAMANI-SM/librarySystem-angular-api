@@ -22,7 +22,7 @@ export class DinamalarNewspaperComponent implements OnInit {
   {
      
     this.spinner.show();
-     const url="http://localhost:9050/news/dinamalar";
+     const url="https://collegelibrarysystem.herokuapp.com/news/dinamalar";
         this.http.get(url).subscribe((res:any)=>{
         this.spinner.hide();
         this.value=res;

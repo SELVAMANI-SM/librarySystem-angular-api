@@ -18,7 +18,9 @@
             <tbody id="display">
                 <tr *ngFor="let date of value">
                     <td>{{date.date}}</td>
-                    <td><a href="{{date.dinamalar}}">Link</a></td>
+
+                    <iframe [src]="date.dinamalar| safe"  alt="video1" width="400px" height="400px"></iframe>
+                    <td>{{date.dinamalar}}</td> 
                 </tr>
             </tbody>
         </table>

@@ -28,7 +28,7 @@ export class ShowallmemberComponent implements OnInit {
  event?.preventDefault();
     
         this.spinner.show();
-        const url ="http://localhost:9050/user/allMember";
+        const url ="https://collegelibrarysystem.herokuapp.com/user/allMember";
         this.http.get(url).subscribe((res: any) => {
           this.spinner.hide();
           this.item = res;

@@ -11,10 +11,7 @@ import { TakebookserviceService } from '../services/takeBooksService/takebookser
 })
 export class DisplayBookComponent implements OnInit {
   
-  // isLoading = false;
-  // load() : void {
-  //   this.isLoading = true;
-  //   setTimeout( () => this.isLoading = false, 2000 );
+
 
 
   constructor( private tbs:TakebookserviceService,private spinner:NgxSpinnerService,private http:HttpClient,private toastr:ToastrService) { }
@@ -38,7 +35,7 @@ export class DisplayBookComponent implements OnInit {
     
   
    this.spinner.show();
-    const url="http://localhost:9050/book/display";
+    const url="https://collegelibrarysystem.herokuapp.com/book/display";
     this.http.get(url).subscribe((res: any) => {
       this.spinner.hide(); 
         this.value = res;

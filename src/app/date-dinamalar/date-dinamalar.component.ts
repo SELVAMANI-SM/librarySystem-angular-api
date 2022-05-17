@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 
@@ -10,19 +11,23 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class DateDinamalarComponent implements OnInit {
 
-  constructor(private spinner: NgxSpinnerService,private http:HttpClient,private toaster:ToastrService) { }
+  constructor(private spinner: NgxSpinnerService,private http:HttpClient,private toaster:ToastrService ) { }
 
   ngOnInit(): void {
   }
-  datedinamalar!:String;
+  datedinamalar:String = "2022-05-08";
   value!:any;
   date!:any;
   none="none";
+
+
   
   dateDinamalar()
   {
     this.validation(this.datedinamalar);
   }
+
+  
   validation(datedinamalar:String)
   {
     event?.preventDefault();
@@ -38,7 +43,7 @@ export class DateDinamalarComponent implements OnInit {
     {
       this.spinner.show();
     
-        const url="http://localhost:9050/news/dinamalarByDate/"+datedinamalar;
+        const url="https://collegelibrarysystem.herokuapp.com/news/dinamalarByDate/"+datedinamalar;
         this.http.get(url).subscribe((res:any)=>{
 
         

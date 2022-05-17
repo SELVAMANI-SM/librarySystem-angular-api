@@ -32,7 +32,7 @@ export class DateIndianexpressComponent implements OnInit {
     }
     if (count == 1) {
       this.spinner.show();
-      const url = "http://localhost:9050/news/IndianExpressByDate/" + dateindian;
+      const url = "https://collegelibrarysystem.herokuapp.com/news/IndianExpressByDate/" + dateindian;
   
         this.http.get(url).subscribe((res: any) => {
           this.spinner.hide();

@@ -38,7 +38,7 @@ export class VideoLinkComponent implements OnInit {
     {
       alert(videolink);
       this.spinner.show();
-      const url="http://localhost:9050/book/videoLink/"+videolink;
+      const url="https://collegelibrarysystem.herokuapp.com/book/videoLink/"+videolink;
         this.http.get(url).subscribe((res:any)=>
         {
           this.spinner.hide();

@@ -30,7 +30,7 @@ export class MembersDetailsComponent implements OnInit {
 
 
       this.spinner.show();
-    const url = "http://localhost:9050/book/allMember";
+    const url = "https://collegelibrarysystem.herokuapp.com/book/allMember";
     this.http.get(url).subscribe((res: any) => {
       this.spinner.hide();
       this.item = res;

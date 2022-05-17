@@ -29,7 +29,7 @@ export class UsersProcessComponent implements OnInit {
     event?.preventDefault();
 
     this.spinner.show();
-    const url = "http://localhost:9050/book/allUser";
+    const url = "https://collegelibrarysystem.herokuapp.com/book/allUser";
     this.http.get(url).subscribe((res: any) => {
 
       this.spinner.hide();
