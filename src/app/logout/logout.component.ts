@@ -19,6 +19,7 @@ export class LogoutComponent implements OnInit {
     localStorage.removeItem("SESSION_ID");
     localStorage.removeItem("SESSION_USER");
     this.router.navigate(["home"]);
+    window.location.reload();
 
 
 }
