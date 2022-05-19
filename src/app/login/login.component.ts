@@ -66,9 +66,9 @@ export class LoginComponent implements OnInit {
          
           localStorage.setItem("SESSION_ID",value);
           localStorage.setItem("SESSION_USER",JSON.stringify(type));
-          window.location.reload();
-          window.location.href="http://localhost:4200/display-book";
-         // window.location.href = "http://localhost:4200/login";
+    
+          this.router.navigate(["display-book"])
+               // window.location.href = "http://localhost:4200/login";
         }, (err) => {
           alert(err.error.message);
           this.toastr.error(err.error);
