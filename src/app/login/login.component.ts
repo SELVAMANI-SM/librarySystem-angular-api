@@ -66,9 +66,11 @@ export class LoginComponent implements OnInit {
          
           localStorage.setItem("SESSION_ID",value);
           localStorage.setItem("SESSION_USER",JSON.stringify(type));
-         
-          this.router.navigate(["display-book"]);
-          
+        
+
+          window.location.reload();
+          window.location.href="display-book";
+                    
         }, (err) => {
           alert(err.error.message);
           this.toastr.error(err.error);

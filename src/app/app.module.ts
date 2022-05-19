@@ -55,6 +55,7 @@ import { MemberregisterComponent } from './memberregister/memberregister.compone
 import { ToastrModule } from 'ngx-toastr';
 import { SafePipe } from './safe.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,7 +102,6 @@ import { SafePipe } from './safe.pipe';
     PaymentComponent,
     MemberregisterComponent,
     SafePipe,
-
   ],
   imports: [
     BrowserModule,

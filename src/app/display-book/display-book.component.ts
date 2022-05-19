@@ -17,7 +17,6 @@ export class DisplayBookComponent implements OnInit {
   constructor( private tbs:TakebookserviceService,private spinner:NgxSpinnerService,private http:HttpClient,private toastr:ToastrService) { }
 
   ngOnInit(): void {
-    window.location.reload();
    this.displayBook()
   }
   

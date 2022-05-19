@@ -10,7 +10,7 @@ export class AppComponent {
     throw new Error('Method not implemented.');
   }
   ngOnInit(): void {
-   this.User()
+    this.User()
   }
   user!: any
   users="users"
@@ -20,6 +20,12 @@ export class AppComponent {
 
   type!: any
   types!:any
+  logout(){
+    localStorage.removeItem("SESSION_ID");
+    localStorage.removeItem("SESSION_USER");
+    window.location.reload();
+    window.location.href="home";
+  }
 
   User() {
     this.type = localStorage.getItem("SESSION_USER");
@@ -40,9 +46,7 @@ export class AppComponent {
     {
         this.user="admin"
     }
-  
-   
-    console.log(this.user);
   }
+
  
 }

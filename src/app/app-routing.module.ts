@@ -3,7 +3,7 @@ import { DefaultUrlSerializer, RouterModule, Routes } from '@angular/router';
 import { AddBookComponent } from './add-book/add-book.component';
 import { AddnewspaperComponent } from './addnewspaper/addnewspaper.component';
 import { AllqueryComponent } from './allquery/allquery.component';
-import { AuthGuard } from './auth.guard';
+
 import { ContactusComponent } from './contactus/contactus.component';
 import { DateDinamalarComponent } from './date-dinamalar/date-dinamalar.component';
 import { DateHinduComponent } from './date-hindu/date-hindu.component';
@@ -15,11 +15,13 @@ import { DeletenewspaperComponent } from './deletenewspaper/deletenewspaper.comp
 import { DinamalarNewspaperComponent } from './dinamalar-newspaper/dinamalar-newspaper.component';
 import { DisplayBookComponent } from './display-book/display-book.component';
 import { EbookLinkComponent } from './ebook-link/ebook-link.component';
+
 import { HinduNewspaperComponent } from './hindu-newspaper/hindu-newspaper.component';
 import { HomeComponent } from './home/home.component';
 import { IndianexpressNewspaperComponent } from './indianexpress-newspaper/indianexpress-newspaper.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+
 import { MemberregisterComponent } from './memberregister/memberregister.component';
 import { MemberreturnbookComponent } from './memberreturnbook/memberreturnbook.component';
 import { MembersDetailsComponent } from './members-details/members-details.component';
@@ -96,6 +98,8 @@ const routes: Routes = [
   {path:'showallmember',component:ShowallmemberComponent},
   {
     path:'memberregister',component:MemberregisterComponent},
+
+    
 
   {path:'zzz',component:ZzzComponent},
   {path:'',redirectTo:'home',pathMatch:'full'}

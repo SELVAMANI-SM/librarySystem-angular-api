@@ -10,16 +10,27 @@ import { Router } from '@angular/router';
 export class LogoutComponent implements OnInit {
 
   constructor(private router:Router) { }
+  
   ngOnInit(): void {
+  
     this.Logout()
+    
   }
   Logout()
   {
+    let count =2;
     event?.preventDefault();
     localStorage.removeItem("SESSION_ID");
     localStorage.removeItem("SESSION_USER");
-    this.router.navigate(["home"]);
+    if(count==2)
+    {
     window.location.reload();
+  }
+  count++;
+    this.router.navigate(["home"]);
+    
+
+
 
 
 }
