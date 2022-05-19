@@ -27,7 +27,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { UserBookDetailsComponent } from './user-book-details/user-book-details.component';
 import { SearchByBookNameComponent } from './search-by-book-name/search-by-book-name.component';
 import { SearchByBookAuthorComponent } from './search-by-book-author/search-by-book-author.component';
-import { LogoutComponent } from './logout/logout.component';
+
 import { UsersDetailsComponent } from './users-details/users-details.component';
 import { MembersDetailsComponent } from './members-details/members-details.component';
 import { NgHttpLoaderModule } from 'ng-http-loader';
@@ -80,7 +80,6 @@ import { SafePipe } from './safe.pipe';
     UserBookDetailsComponent,
     SearchByBookNameComponent,
     SearchByBookAuthorComponent,
-    LogoutComponent,
     UsersDetailsComponent,
     MembersDetailsComponent,
     ContactusComponent,

@@ -20,7 +20,7 @@ import { HinduNewspaperComponent } from './hindu-newspaper/hindu-newspaper.compo
 import { HomeComponent } from './home/home.component';
 import { IndianexpressNewspaperComponent } from './indianexpress-newspaper/indianexpress-newspaper.component';
 import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './logout/logout.component';
+
 
 import { MemberregisterComponent } from './memberregister/memberregister.component';
 import { MemberreturnbookComponent } from './memberreturnbook/memberreturnbook.component';
@@ -77,7 +77,6 @@ const routes: Routes = [
   {path:'user-book-details',component:UserBookDetailsComponent},
   {path:'video-link',component:VideoLinkComponent},
   {path:'user-details',component:UsersDetailsComponent},
-  {path:'logout',component:LogoutComponent},
   {path:'contactus',component:ContactusComponent},
   {path:'users-details',component:UsersDetailsComponent},
   {path:'userquery',component:UserqueryComponent},
