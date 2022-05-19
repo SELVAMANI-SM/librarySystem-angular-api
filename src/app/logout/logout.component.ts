@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-logout',
@@ -8,7 +9,7 @@ import { RouterLink } from '@angular/router';
 })
 export class LogoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
   ngOnInit(): void {
     this.Logout()
   }
@@ -18,7 +19,9 @@ export class LogoutComponent implements OnInit {
     localStorage.removeItem("SESSION_ID");
     localStorage.removeItem("SESSION_USER");
     window.location.reload();
-    window.location.href="http://localhost:4200/home";
+    //window.location.href="http://localhost:4200/home";
+    this.router.navigate(["home"]);
+
 
 }
 
