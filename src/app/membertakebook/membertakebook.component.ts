@@ -77,11 +77,11 @@ export class MembertakebookComponent implements OnInit {
      this.id=localStorage.getItem("SESSION_ID");
      this.type = localStorage.getItem("SESSION_USER");
     this.type=JSON.parse(this.type);
-     const url="http://localhost:9050/book/takeBook?id="+id+"&userId="+this.id+"&type="+this.type;
+     const url="https://collegelibrarysystem.herokuapp.com/book/takeBook?id="+id+"&userId="+this.id+"&type="+this.type;
    fetch(url).then(res=>res.text()).then(res=>{
      let value=res;
      alert(value);
-     window.location.href="http://localhost:4200/users-details";
+     window.location.href="users-details";
    });
    }
 
