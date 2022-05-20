@@ -55,7 +55,7 @@ export class ReturnbookComponent implements OnInit {
      
     
     
-     const url="http://localhost:9050/book/findById/"+ans;
+     const url="https://collegelibrarysystem.herokuapp.com/book/findById/"+ans;
      fetch(url).then(res=>res.json()).then(res=>{
        
        
@@ -78,12 +78,12 @@ export class ReturnbookComponent implements OnInit {
     
      this.id=localStorage.getItem("SESSION_ID");
      alert(this.id);
-     const url="http://localhost:9050/book/returnBook?id="+id+"&userId="+this.id;
+     const url="https://collegelibrarysystem.herokuapp.com/book/returnBook?id="+id+"&userId="+this.id;
     
      fetch(url).then(res=>res.text()).then(res=>{
        let varr=res;
        alert(varr);
-       window.location.href="http://localhost:4200/users-details";
+       window.location.href="users-details";
      });
      
    }

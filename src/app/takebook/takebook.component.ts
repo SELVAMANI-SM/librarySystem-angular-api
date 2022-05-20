@@ -78,7 +78,7 @@ export class TakebookComponent implements OnInit {
    fetch(url).then(res=>res.text()).then(res=>{
      let value=res;
      alert(value);
-     window.location.href="http://localhost:4200/users-details";
+     window.location.href="users-details";
      
    });
    }
