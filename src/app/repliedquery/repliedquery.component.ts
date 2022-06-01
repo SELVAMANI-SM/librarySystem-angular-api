@@ -66,7 +66,7 @@ export class RepliedqueryComponent implements OnInit {
     {
      
       this.spinner.show();
-      const url="http://localhost:9050/user/queryReply?userId="+number+"&reply="+this.name+"&userQuery="+userQuery;
+      const url="https://collegelibrarysystem.herokuapp.com/user/queryReply?userId="+number+"&reply="+this.name+"&userQuery="+userQuery;
       this.http.get(url).subscribe((res:any)=>
       {
         this.spinner.hide();
